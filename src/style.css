@@ -14,3 +14,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/**/
+
+#app > ul:first-child {
+    /* border: 2px solid red; */
+    padding: 0;
+}
+
+ul {
+    position: relative;
+    padding: 0 2rem;
+    list-style: none;
+}
+
+li {
+    display: block;
+    left: 100%;
+}
+
+.mi-text {
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.mi-text:hover {
+    background-color: blue;
+}
+
+.mi-text > input[type="checkbox"]:checked + div {
+    border: 2px solid red;
+    background-color: green;
+}
+
+.mi-text > input[type="checkbox"]:checked > ul li {
+    border: 2px solid red;
+    background-color: green;
+}

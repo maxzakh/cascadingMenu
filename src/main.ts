@@ -21,7 +21,18 @@ function createMenuItem(menuItem: MenuItem): string {
     }
 
 
-    const listItem = `<li>${menuItem.text}${nestedMenu}</li>`;
+    const listItem = `
+        <li>
+            <label>
+                <input type="checkbox" /> 
+            </label>
+            <div class='mi-text'>
+                <div>${menuItem.text}</div>
+            </div>
+            
+            ${nestedMenu}
+        </li>`;
+    // const listItem = `<li><span class='mi-text'>${menuItem.text}</span>${nestedMenu}</li>`;
 
     //console.log('<<<-------- exit', menuItem.text);
 
@@ -43,6 +54,15 @@ const menu: MenuItem = {
                 { text: 'sub-contact1' },
                 { text: 'sub-contact2' },
                 { text: 'sub-contact3' },
+                {
+                    text: 'sub-sub-about',
+                    items: [
+                        { text: 'sub-sub-contact1' },
+                        { text: 'sub-sub-contact2' },
+                        { text: 'sub-sub-contact3' },
+                    ]
+                },
+                { text: 'sub-contact5' },
             ]
         },
         { text: 'contact3' },
